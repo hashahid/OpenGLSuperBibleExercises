@@ -148,7 +148,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ch2triangle.cpp" />
+    <ClCompile Include="ch2triangle.cpp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="ch3movingtriangle.cpp" />
+    <ClCompile Include="ch3tessellatedtriangle.cpp" />
+    <ClCompile Include="exercisebase.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="shadercreator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ch3tessellatedtriangle.h" />
+    <ClInclude Include="ch2triangle.h" />
+    <ClInclude Include="ch3movingtriangle.h" />
+    <ClInclude Include="exercisebase.h" />
+    <ClInclude Include="shadercreator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader Files\Chapter 2\triangle.frag" />
+    <None Include="Shader Files\Chapter 2\triangle.vert" />
+    <None Include="Shader Files\Chapter 3\movingtriangle.vert" />
+    <None Include="Shader Files\Chapter 3\tessellatedtriangle.geom" />
+    <None Include="Shader Files\Chapter 3\tessellatedtriangle.tesc" />
+    <None Include="Shader Files\Chapter 3\tessellatedtriangle.tese" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,10 +13,71 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Shader Files">
+      <UniqueIdentifier>{01118017-981b-4089-a113-386325d8d878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shader Files\Chapter 2">
+      <UniqueIdentifier>{12726a7d-fa1f-402a-b4da-bad114933294}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shader Files\Chapter 3">
+      <UniqueIdentifier>{a6e932f1-4d8a-44ae-80a1-6836c7b091e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ch3movingtriangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="ch2triangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="exercisebase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shadercreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch3tessellatedtriangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ch3movingtriangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exercisebase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch2triangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shadercreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch3tessellatedtriangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader Files\Chapter 2\triangle.frag">
+      <Filter>Source Files\Shader Files\Chapter 2</Filter>
+    </None>
+    <None Include="Shader Files\Chapter 2\triangle.vert">
+      <Filter>Source Files\Shader Files\Chapter 2</Filter>
+    </None>
+    <None Include="Shader Files\Chapter 3\movingtriangle.vert">
+      <Filter>Source Files\Shader Files\Chapter 3</Filter>
+    </None>
+    <None Include="Shader Files\Chapter 3\tessellatedtriangle.tesc">
+      <Filter>Source Files\Shader Files\Chapter 3</Filter>
+    </None>
+    <None Include="Shader Files\Chapter 3\tessellatedtriangle.tese">
+      <Filter>Source Files\Shader Files\Chapter 3</Filter>
+    </None>
+    <None Include="Shader Files\Chapter 3\tessellatedtriangle.geom">
+      <Filter>Source Files\Shader Files\Chapter 3</Filter>
+    </None>
   </ItemGroup>
 </Project>
