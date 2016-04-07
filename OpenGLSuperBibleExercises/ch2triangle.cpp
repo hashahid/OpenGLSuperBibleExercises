@@ -1,14 +1,11 @@
 #include "ch2triangle.h"
 #include "shadercreator.h"
 
-Ch2Triangle::Ch2Triangle() : window{ glfwCreateWindow(640, 480, "Simple Triangle", nullptr, nullptr) } {
+Ch2Triangle::Ch2Triangle() : window {glfwCreateWindow(640, 480, "Simple Triangle", nullptr, nullptr)} {
 	if (!window) {
 		glfwTerminate();
 		throw std::runtime_error("GLFW window failed to initialize.");
 	}
-}
-
-void Ch2Triangle::run(void) {
 	glfwMakeContextCurrent(window);
 	glfwSetKeyCallback(window, key_callback);
 
@@ -18,7 +15,9 @@ void Ch2Triangle::run(void) {
 		glfwTerminate();
 		throw std::runtime_error(reinterpret_cast<const char*>(glewGetErrorString(err)));
 	}
+}
 
+void Ch2Triangle::run(void) {
 	rendering_program = glCreateProgram();
 	ShaderCreator::attach_shader(GL_VERTEX_SHADER, ".\\Shader Files\\Chapter 2\\triangle.vert", rendering_program);
 	ShaderCreator::attach_shader(GL_FRAGMENT_SHADER, ".\\Shader Files\\Chapter 2\\triangle.frag", rendering_program);
@@ -28,7 +27,7 @@ void Ch2Triangle::run(void) {
 
 	/* render loop */
 	while (!glfwWindowShouldClose(window)) {
-		const GLfloat color[]{ 0.0f, 0.2f, 0.0f, 1.0f };
+		const GLfloat color[] {0.0f, 0.2f, 0.0f, 1.0f};
 		glClearBufferfv(GL_COLOR, 0, color);
 
 		glUseProgram(rendering_program);

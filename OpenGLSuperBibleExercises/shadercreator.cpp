@@ -12,17 +12,17 @@ std::string ShaderCreator::read_shader_file(const char *filename) {
 		in.close();
 		return contents;
 	}
-	std::string err = "Failed to read shader file ";
+	std::string err {"Failed to read shader file "};
 	throw std::runtime_error(err + filename);
 }
 
 void ShaderCreator::attach_shader(GLenum shader_type, const char *shader_filename, GLuint program) {
 	/* read in source and create shader object */
-	std::string shader_source = read_shader_file(shader_filename);
+	std::string shader_source {read_shader_file(shader_filename)};
 	GLuint shader = glCreateShader(shader_type);
 
 	/* attach source to shader and compile */
-	const GLchar *source = (const GLchar *)shader_source.c_str();
+	const GLchar *source {(const GLchar *)shader_source.c_str()};
 	glShaderSource(shader, 1, &source, nullptr);
 	glCompileShader(shader);
 
